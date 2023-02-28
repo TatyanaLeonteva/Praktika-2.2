@@ -14,8 +14,8 @@ return arr;
 
 System.Console.WriteLine("Введите длину массива: ");
 int length = Convert.ToInt32(Console.ReadLine());
-int[] arr = FillArrayWithRandomNumbers(length);
-System.Console.WriteLine($"[{string.Join(", ", arr)}]");
+int[] array = FillArrayWithRandomNumbers(length);
+System.Console.WriteLine($"[{string.Join(", ", array)}]");
 
 int[] NewArray = new int[length];
 
@@ -23,7 +23,7 @@ System.Console.WriteLine($"[{string.Join(", ", NewArray)}]");
 
 for (int i=0; i < length; i++)
 {
-    NewArray[i] = arr[i];
+    NewArray[i] = array[i];
 }
 
 System.Console.WriteLine($"[{string.Join(", ", NewArray)}]");
