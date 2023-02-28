@@ -19,13 +19,10 @@ int length = Convert.ToInt32(Console.ReadLine());
 int[] array = FillArrayWithRandomNumbers(length);
 System.Console.WriteLine($"[{string.Join(", ", array)}]");
 
-int countEven = 0;
+int SumOdd = 0;
 
-for(int i = 0; i < array.Length; i++)
+for(int i = 1; i < array.Length; i=i+2)
 {
-if(array[i]%2 == 0)
-    {
-    countEven=countEven+1;
-    }
+    SumOdd=SumOdd+array[i];
 }
-System.Console.WriteLine($"Кол-во чётных = {countEven}");
+System.Console.WriteLine($"Сумма нечётных = {SumOdd}");
