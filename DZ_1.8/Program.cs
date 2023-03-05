@@ -9,6 +9,7 @@ int N = Convert.ToInt32(Console.ReadLine());
 if (N < 2)
 {
     Console.Write($"Введено неверное число ");
+    return;
 }
 else
 {
