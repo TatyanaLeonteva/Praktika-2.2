@@ -1,4 +1,4 @@
-﻿// Задача 52. Задайте двумерный массив из целых чисел. 
+﻿// Задача 52. Задайте двумерный массив из целых чисел.
 // Найдите среднее арифметическое элементов в каждом столбце.
 
 // Например, задан массив:
@@ -16,7 +16,7 @@ int[,] ArrayMxN(int row, int column)
     {
         for (int j = 0; j < column; j++)
         {
-            matrix[i, j] = rnd.Next(-100, 101);
+            matrix[i, j] = rnd.Next(-10, 11);
         }
     }
     return matrix;
@@ -38,25 +38,25 @@ void PrintArrayMxN(int[,] matrix)
 
 void AverageColum(int[,] matrix)
 {
-    int 
-    for(j=0; j<matrix.GetLength(1); j++)
+    int length = matrix.GetLength(1);
+    int[] arrayAverage = new int[length];
+
+    double aver = 0;
+    for (int j = 0; j < matrix.GetLength(1); j++)
     {
-        aver=aver
+        double sum = 0;
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            sum = sum + matrix[i, j];
+        }
+        aver = sum / (matrix.GetLength(0));
+        System.Console.WriteLine($"Среднее арифметическое столбца №{j+1} = {string.Join(", ", aver)} \t");
     }
-    // if (x >= matrix.GetLength(0) || y >= matrix.GetLength(1))
-    // {
-    //     System.Console.Write($"\nТакого числа в массиве нет");
-    // }
-    // else
-    // {
-    //     int M = matrix[x, y];
-    //     System.Console.Write($"\nПозиция {x}{y} = {M}" + "\n");
-    // }
 }
 
-int row = 5;
-int column = 5;
+int row = 2;
+int column = 3;
 int[,] matrix = ArrayMxN(row, column);
 
 PrintArrayMxN(matrix);
-NumberByPosition(matrix);
+AverageColum(matrix);
