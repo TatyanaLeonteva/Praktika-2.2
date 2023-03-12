@@ -23,5 +23,6 @@ System.Console.Write("Введите число больше 0: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 int temp = 1;
+
 System.Console.Write($"Промежуток от {number} до 1:  " );
 RoadToN(temp, number);
