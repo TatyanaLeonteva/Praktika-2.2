@@ -35,3 +35,4 @@ for(int i = 1; i < array.Length; i++)
 }
 double diff=max-min;
 System.Console.WriteLine($"Max = {max}, Min = {min}, diff = {diff}");
+ 
